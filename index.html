@@ -98,6 +98,10 @@
           </div>
         </form>
       </div>
+
+      <!-- <div class="mark-wraper">
+        <span>正在提交...</span>
+      </div> -->
     </div>
 </body>
 <script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -120,6 +124,8 @@
 
     // 表单提交
     $(".J_submit").on('click', function() {
+      var _this = this;
+      $(".J_submit").html("正在提交...")
       var datas = $(".form" + type).serializeObject();
       $.ajax({
         type: 'POST',
@@ -128,8 +134,8 @@
         dataType: 'json',
         data: JSON.stringify(datas),
         success: function(data) {
+          $(".J_submit").html("提交")
           if(data.statusCode == 0) {
-            console.log(data.data.appId);
             // 调起微信支付
             function onBridgeReady(){
                WeixinJSBridge.invoke(
