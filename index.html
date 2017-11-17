@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>高炉家·徽酒集团植树环保行动</title>
+  <meta name="description" content="共建最美酒厂，最美高炉">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="form-wrapper">
+      <div class="content">
+        <!-- 个人表单提交 -->
+        <form class="formData form1" data-toggle="validator" role="form">
+          <input type="hidden" name="openId" class="J_openId">
+          <div class="form-group">
+            <label for="">捐赠人 <span class="red">*</span></label>
+            <input class="form-control" placeholder="" name="personal" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">个人捐赠金额 <span class="red">*</span></label>
+            <input type="number" class="form-control" name="personal_money" placeholder="" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">个人联系方式 <span class="red">*</span></label>
+            <input type="text" class="form-control" placeholder="" name="personal_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success text-center" type="submit">提交</button>
+          </div>
+        </form>
+
+        <!-- 企业表单提交 -->
+        <form class="formData form2" data-toggle="validator" role="form">
+          <input type="hidden" name="openId" class="J_openId">
+          <div class="form-group">
+            <label for="company">捐赠企业 <span class="red">*</span></label>
+            <input type="text" class="form-control inputxt" id="company" name="name" required data-error="">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">企业捐赠金额 <span class="red">*</span></label>
+            <input type="number" min="5000" class="form-control" name="company_money" placeholder="" data-error="" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">企业联系方式 <span class="red">*</span></label>
+            <input type="text" class="form-control" placeholder="" name="company_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success text-center" type="submit">提交</button>
+          </div>
+        </form>
+
+        <!-- 个人企业表单提交 -->
+        <form class="formData form3" data-toggle="validator" role="form">
+          <input type="hidden" name="openId" class="J_openId">
+          <div class="form-group">
+            <label for="company">捐赠企业 <span class="red">*</span></label>
+            <input type="text" class="form-control inputxt" id="company" name="name" required data-error="">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">企业捐赠金额 <span class="red">*</span></label>
+            <input type="number" min="5000" class="form-control" name="company_money" placeholder="" data-error="" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">企业联系方式 <span class="red">*</span></label>
+            <input type="text" class="form-control" placeholder="" name="company_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">捐赠人 <span class="red">*</span></label>
+            <input class="form-control" placeholder="" name="personal" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">个人捐赠金额 <span class="red">*</span></label>
+            <input type="number" min="1000" class="form-control" name="personal_money" placeholder="" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group">
+            <label for="">个人联系方式 <span class="red">*</span></label>
+            <input type="text" class="form-control" placeholder="" name="personal_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success text-center" type="submit">提交</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/validator.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript">
+  $(function() {
+    var openId = getQueryString("openId");
+    var type = getQueryString("type");
+    if(type == 1) {
+      $(".form1").show();
+    } else if (type == 2) {
+      $(".form2").show();
+    } else {
+      $(".form3").show();
+    }
+    $(".J_openId").val(openId);
+  })
+</script>
+</html>
