@@ -14,86 +14,86 @@
     <div class="form-wrapper">
       <div class="content">
         <!-- 个人表单提交 -->
-        <form class="formData form1" data-toggle="validator" role="form">
-          <input type="hidden" name="openId" class="J_openId">
+        <form class="formData form1" data-toggle="validator" role="form" method="post">
+          <input type="hidden" name="openid" class="J_openId">
           <div class="form-group">
             <label for="">捐赠人 <span class="red">*</span></label>
-            <input class="form-control" placeholder="" name="personal" required>
+            <input class="form-control" placeholder="" name="donor" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">个人捐赠金额 <span class="red">*</span></label>
-            <input type="number" class="form-control" name="personal_money" placeholder="" required>
+            <input type="number" class="form-control" name="personalAmount" placeholder="" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">个人联系方式 <span class="red">*</span></label>
-            <input type="text" class="form-control" placeholder="" name="personal_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <input type="text" class="form-control" placeholder="" name="personalMobile" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="text-center">
-            <button class="btn btn-success text-center" type="submit">提交</button>
+            <button class="btn btn-success text-center J_submit">提交</button>
           </div>
         </form>
 
         <!-- 企业表单提交 -->
-        <form class="formData form2" data-toggle="validator" role="form">
-          <input type="hidden" name="openId" class="J_openId">
+        <form class="formData form2" data-toggle="validator" role="form" method="post">
+          <input type="hidden" name="openid" class="J_openId">
           <div class="form-group">
             <label for="company">捐赠企业 <span class="red">*</span></label>
-            <input type="text" class="form-control inputxt" id="company" name="name" required data-error="">
+            <input type="text" class="form-control inputxt" id="company" name="enterprise" required data-error="">
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">企业捐赠金额 <span class="red">*</span></label>
-            <input type="number" min="5000" class="form-control" name="company_money" placeholder="" data-error="" required>
+            <input type="number" min="5000" class="form-control" name="enterpriseAmount" placeholder="" data-error="" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">企业联系方式 <span class="red">*</span></label>
-            <input type="text" class="form-control" placeholder="" name="company_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <input type="text" class="form-control" placeholder="" name="enterpriseMobile" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="text-center">
-            <button class="btn btn-success text-center" type="submit">提交</button>
+            <button class="btn btn-success text-center J_submit">提交</button>
           </div>
         </form>
 
         <!-- 个人企业表单提交 -->
-        <form class="formData form3" data-toggle="validator" role="form">
-          <input type="hidden" name="openId" class="J_openId">
+        <form class="formData form3" data-toggle="validator" role="form" method="post">
+          <input type="hidden" name="openid" class="J_openId">
           <div class="form-group">
             <label for="company">捐赠企业 <span class="red">*</span></label>
-            <input type="text" class="form-control inputxt" id="company" name="name" required data-error="">
+            <input type="text" class="form-control inputxt" id="company" name="enterprise" required data-error="">
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">企业捐赠金额 <span class="red">*</span></label>
-            <input type="number" min="5000" class="form-control" name="company_money" placeholder="" data-error="" required>
+            <input type="number" min="5000" class="form-control" name="enterpriseAmount" placeholder="" data-error="" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">企业联系方式 <span class="red">*</span></label>
-            <input type="text" class="form-control" placeholder="" name="company_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <input type="text" class="form-control" placeholder="" name="enterpriseMobile" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">捐赠人 <span class="red">*</span></label>
-            <input class="form-control" placeholder="" name="personal" required>
+            <input class="form-control" placeholder="" name="donor" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">个人捐赠金额 <span class="red">*</span></label>
-            <input type="number" min="1000" class="form-control" name="personal_money" placeholder="" required>
+            <input type="number" min="1000" class="form-control" name="personalAmount" placeholder="" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">个人联系方式 <span class="red">*</span></label>
-            <input type="text" class="form-control" placeholder="" name="personal_phone" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
+            <input type="text" class="form-control" placeholder="" name="personalMobile" pattern="^1[3|4|5|7|8][0-9]\d{4,8}$"  data-error="请输入正确的手机号码" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="text-center">
-            <button class="btn btn-success text-center" type="submit">提交</button>
+            <button class="btn btn-success text-center J_submit">提交</button>
           </div>
         </form>
       </div>
@@ -103,17 +103,92 @@
 <script type="text/javascript" src="./js/validator.min.js"></script>
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript">
+  var url = "https://donate-dev-h9.thy360.com"
   $(function() {
     var openId = getQueryString("openId");
     var type = getQueryString("type");
-    if(type == 1) {
-      $(".form1").show();
+    if(type == 3) {
+      $(".form3").show();
     } else if (type == 2) {
       $(".form2").show();
     } else {
-      $(".form3").show();
+      $(".form1").show();
     }
     $(".J_openId").val(openId);
+
+
+    // 表单提交
+    $(".J_submit").on('click', function() {
+      var datas = $(".form" + type).serializeObject();
+      /*var data = {
+          openid: 'og6Yvv0PNdOIeYXfo6oYvBiVinDA',
+          donor: 'wawa',
+          personalAmount: '2000',
+          personalMobile: '13590193725',
+        };*/
+      $.ajax({
+        type: 'POST',
+        url: url + '/h9/pay/donate/pay/submit',
+        contentType: 'application/json;charset=UTF-8',
+        dataType: 'json',
+        data: JSON.stringify(datas),
+        success: function(data) {
+          if(data.statusCode == 0) {
+            console.log(data.data.appId);
+            // 调起微信支付
+            function onBridgeReady(){
+               WeixinJSBridge.invoke(
+                   'getBrandWCPayRequest', {
+                       "appId": data.data.appId,     //公众号名称，由商户传入
+                       "timeStamp":data.data.timeStamp,         //时间戳，自1970年以来的秒数
+                       "nonceStr":data.data.nonceStr, //随机串
+                       "package":data.data.package,
+                       "signType":data.data.signType,         //微信签名方式：
+                       "paySign":data.data.paySign //微信签名
+                   },
+                   function(res){
+                      console.info(res)
+                       if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+                        location.href = "./success.html";
+                       }else {
+                       }
+                   }
+               );
+            }
+            if (typeof WeixinJSBridge == "undefined"){
+               if( document.addEventListener ){
+                   document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+               }else if (document.attachEvent){
+                   document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                   document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+               }
+            }else{
+               onBridgeReady();
+            }
+
+          }
+        }
+      })
+      return false;
+    })
+
+    // 表单序列化为JSON对象
+    $.fn.serializeObject = function() {
+      var o = {};
+      var a = this.serializeArray();
+      $.each(a, function() {
+          if (o[this.name]) {
+              if (!o[this.name].push) {
+                  o[this.name] = [ o[this.name] ];
+              }
+              o[this.name].push(this.value || '');
+          } else {
+              o[this.name] = this.value || '';
+          }
+      });
+      return o;
+    }
+
   })
 </script>
 </html>

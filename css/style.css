@@ -21,3 +21,8 @@
 .form3{
   display: none;
 }
+
+.form1,
+.form2{
+  margin-top: 12em;
+}
