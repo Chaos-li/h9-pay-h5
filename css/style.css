@@ -36,7 +36,7 @@
   opacity:0.5;
   position:absolute;
   text-align:center;
-  color:blue;
+  color:#fff;
   height:25px;
   font-weight:bold;
   overflow:hidden;
@@ -44,11 +44,4 @@
   height: 100%;
   left: 0;
   top: 0;
-}
-.icon{
-  background-image: url(../images/loading.gif);
-  width: 62px;
-  height: 62px;
-  background-image: 62px 62px;
-  display: inline-block;
 }

@@ -99,9 +99,9 @@
         </form>
       </div>
 
-      <div class="mark-wraper">
-        <span class="icon"></span>
-      </div>
+      <!-- <div class="mark-wraper">
+        <span>正在提交...</span>
+      </div> -->
     </div>
 </body>
 <script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -124,6 +124,8 @@
 
     // 表单提交
     $(".J_submit").on('click', function() {
+      var _this = this;
+      $(".J_submit").html("正在提交...")
       var datas = $(".form" + type).serializeObject();
       /*var data = {
           openid: 'og6Yvv0PNdOIeYXfo6oYvBiVinDA',
@@ -138,8 +140,8 @@
         dataType: 'json',
         data: JSON.stringify(datas),
         success: function(data) {
+          $(".J_submit").html("提交")
           if(data.statusCode == 0) {
-            console.log(data.data.appId);
             // 调起微信支付
             function onBridgeReady(){
                WeixinJSBridge.invoke(
@@ -152,7 +154,6 @@
                        "paySign":data.data.paySign //微信签名
                    },
                    function(res){
-                      console.info(res)
                        if(res.err_msg == "get_brand_wcpay_request:ok" ) {
                         location.href = "./success.html?timestamp2="+ (new Date()).getTime();
                        }else {
