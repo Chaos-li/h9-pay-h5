@@ -150,7 +150,7 @@
                    function(res){
                       console.info(res)
                        if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-                        location.href = "./success.html";
+                        location.href = "./success.html?timestamp2="+ (new Date()).getTime();
                        }else {
                        }
                    }
