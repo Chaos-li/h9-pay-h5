@@ -19,12 +19,12 @@
           <input type="hidden" name="openid" class="J_openId">
           <div class="form-group">
             <label for="">捐赠人 <span class="red">*</span></label>
-            <input class="form-control" placeholder="" name="donor" required>
+            <input class="form-control" placeholder="" name="donor" required data-error="捐赠人不能为空">
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">个人捐赠金额 <span class="red">*</span></label>
-            <input class="form-control" type="number" min="1000.00" name="personalAmount" placeholder="" required>
+            <input class="form-control" type="number" min="1000.00" name="personalAmount" placeholder="" required data-error="个人捐赠金额不能少于1000">
             <ul class="money-box">
               <li>1000</li>
               <li>2000</li>
@@ -51,12 +51,12 @@
           <input type="hidden" name="openid" class="J_openId">
           <div class="form-group">
             <label for="company">捐赠企业 <span class="red">*</span></label>
-            <input type="text" class="form-control inputxt" id="company" name="enterprise" required data-error="">
+            <input type="text" class="form-control inputxt" id="company" name="enterprise" required data-error="捐赠企业不能为空">
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">企业捐赠金额 <span class="red">*</span></label>
-            <input class="form-control" type="number" min="5000.00" name="enterpriseAmount" placeholder="" data-error="" required>
+            <input class="form-control" type="number" min="5000.00" name="enterpriseAmount" placeholder="" data-error="企业捐赠金额不能少于5000" required>
             <ul class="money-box">
               <li>5000</li>
               <li>6000</li>
@@ -84,12 +84,12 @@
           <input type="hidden" name="openid" class="J_openId">
           <div class="form-group">
             <label for="company">捐赠企业 <span class="red">*</span></label>
-            <input type="text" class="form-control inputxt" id="company" name="enterprise" required data-error="">
+            <input type="text" class="form-control inputxt" id="company" name="enterprise" required data-error="捐赠企业不能为空">
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">企业捐赠金额 <span class="red">*</span></label>
-            <input type="number" min="5000.00" class="form-control" name="enterpriseAmount" placeholder="" data-error="" required>
+            <input type="number" min="5000.00" class="form-control" name="enterpriseAmount" placeholder="" data-error="企业捐赠金额不能少于5000" required>
             <ul class="money-box">
               <li>5000</li>
               <li>6000</li>
@@ -109,12 +109,12 @@
           </div>
           <div class="form-group">
             <label for="">捐赠人 <span class="red">*</span></label>
-            <input class="form-control" placeholder="" name="donor" required>
+            <input class="form-control" placeholder="" name="donor" required data-error="捐赠人不能为空">
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
             <label for="">个人捐赠金额 <span class="red">*</span></label>
-            <input type="number" min="1000.00" class="form-control" name="personalAmount" placeholder="" required>
+            <input type="number" min="1000.00" class="form-control" name="personalAmount" placeholder="" required data-error="个人捐赠金额不能少于1000">
             <ul class="money-box">
               <li>1000</li>
               <li>2000</li>
