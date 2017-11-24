@@ -25,6 +25,15 @@
           <div class="form-group">
             <label for="">个人捐赠金额 <span class="red">*</span></label>
             <input class="form-control" type="number" min="1000.00" name="personalAmount" placeholder="" required>
+            <ul class="money-box">
+              <li>1000</li>
+              <li>2000</li>
+              <li>3000</li>
+              <li>4000</li>
+              <li>5000</li>
+              <li>8000</li>
+              <li>10000</li>
+            </ul>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
@@ -48,6 +57,16 @@
           <div class="form-group">
             <label for="">企业捐赠金额 <span class="red">*</span></label>
             <input class="form-control" type="number" min="5000.00" name="enterpriseAmount" placeholder="" data-error="" required>
+            <ul class="money-box">
+              <li>5000</li>
+              <li>6000</li>
+              <li>7000</li>
+              <li>8000</li>
+              <li>9000</li>
+              <li>10000</li>
+              <li>15000</li>
+              <li>20000</li>
+            </ul>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
@@ -71,6 +90,16 @@
           <div class="form-group">
             <label for="">企业捐赠金额 <span class="red">*</span></label>
             <input type="number" min="5000.00" class="form-control" name="enterpriseAmount" placeholder="" data-error="" required>
+            <ul class="money-box">
+              <li>5000</li>
+              <li>6000</li>
+              <li>7000</li>
+              <li>8000</li>
+              <li>9000</li>
+              <li>10000</li>
+              <li>15000</li>
+              <li>20000</li>
+            </ul>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
@@ -86,6 +115,15 @@
           <div class="form-group">
             <label for="">个人捐赠金额 <span class="red">*</span></label>
             <input type="number" min="1000.00" class="form-control" name="personalAmount" placeholder="" required>
+            <ul class="money-box">
+              <li>1000</li>
+              <li>2000</li>
+              <li>3000</li>
+              <li>4000</li>
+              <li>5000</li>
+              <li>8000</li>
+              <li>10000</li>
+            </ul>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group">
@@ -177,6 +215,13 @@
         })
         return false;
       }
+    })
+
+    // 金额选择
+    $('.money-box li').on('click', function() {
+      var _this = $(this);
+      _this.addClass('active').siblings().removeClass('active');
+      _this.parent().siblings('input').val(_this.text());
     })
 
     // 表单序列化为JSON对象
