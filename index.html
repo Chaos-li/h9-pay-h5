@@ -61,7 +61,7 @@
               <li data-value="10000">10000</li>
               <li data-value="15000">1.5万</li>
               <li data-value="20000">2万</li>
-              <li data-value="150000">15万</li>
+              <li class="secpity" data-value="30000">>2万(百年银杏大树)</li>
             </ul>
             <div class="help-block with-errors"></div>
           </div>
@@ -95,7 +95,7 @@
               <li data-value="10000">10000</li>
               <li data-value="15000">1.5万</li>
               <li data-value="20000">2万</li>
-              <li data-value="150000">15万</li>
+              <li class="secpity" data-value="30000">>2万(百年银杏大树)</li>
             </ul>
             <div class="help-block with-errors"></div>
           </div>
@@ -215,6 +215,11 @@
         value = _this.attr("data-value");
       _this.addClass('active').siblings().removeClass('active');
       _this.parent().siblings('input').val(value);
+      _this.parent().siblings('input').focus();
+      if(value == '30000') {
+        _this.parent().siblings('input').val('');
+        _this.parent().siblings('input').focus();
+      }
     })
 
     // 表单序列化为JSON对象

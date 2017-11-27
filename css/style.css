@@ -69,6 +69,9 @@ ul{list-style: none}
   margin-bottom: 6px;
 
 }
+.money-box li.secpity{
+  flex: none;
+}
 .money-box li:hover,
 .money-box li.active {
   background-color: #2177C7;
