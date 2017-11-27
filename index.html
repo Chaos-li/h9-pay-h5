@@ -26,8 +26,8 @@
             <label for="">个人捐赠金额 <span class="red">*</span></label>
             <input class="form-control" type="number" min="1000.00" name="personalAmount" placeholder="" required data-error="个人捐赠金额不能少于1000">
             <ul class="money-box">
-              <li>1000</li>
-              <li>2000</li>
+              <li data-value="1000">1000</li>
+              <li data-value="2000">2000</li>
             </ul>
             <div class="help-block with-errors"></div>
           </div>
@@ -53,14 +53,15 @@
             <label for="">企业捐赠金额 <span class="red">*</span></label>
             <input class="form-control" type="number" min="5000.00" name="enterpriseAmount" placeholder="" data-error="企业捐赠金额不能少于5000" required>
             <ul class="money-box">
-              <li>5000</li>
-              <li>6000</li>
-              <li>7000</li>
-              <li>8000</li>
-              <li>9000</li>
-              <li>10000</li>
-              <li>15000</li>
-              <li>20000</li>
+              <li data-value="5000">5000</li>
+              <li data-value="6000">6000</li>
+              <li data-value="7000">7000</li>
+              <li data-value="8000">8000</li>
+              <li data-value="9000">9000</li>
+              <li data-value="10000">10000</li>
+              <li data-value="15000">1.5万</li>
+              <li data-value="20000">2万</li>
+              <li data-value="150000">15万</li>
             </ul>
             <div class="help-block with-errors"></div>
           </div>
@@ -86,14 +87,15 @@
             <label for="">企业捐赠金额 <span class="red">*</span></label>
             <input type="number" min="5000.00" class="form-control" name="enterpriseAmount" placeholder="" data-error="企业捐赠金额不能少于5000" required>
             <ul class="money-box">
-              <li>5000</li>
-              <li>6000</li>
-              <li>7000</li>
-              <li>8000</li>
-              <li>9000</li>
-              <li>10000</li>
-              <li>15000</li>
-              <li>20000</li>
+              <li data-value="5000">5000</li>
+              <li data-value="6000">6000</li>
+              <li data-value="7000">7000</li>
+              <li data-value="8000">8000</li>
+              <li data-value="9000">9000</li>
+              <li data-value="10000">10000</li>
+              <li data-value="15000">1.5万</li>
+              <li data-value="20000">2万</li>
+              <li data-value="150000">15万</li>
             </ul>
             <div class="help-block with-errors"></div>
           </div>
@@ -111,8 +113,8 @@
             <label for="">个人捐赠金额 <span class="red">*</span></label>
             <input type="number" min="1000.00" class="form-control" name="personalAmount" placeholder="" required data-error="个人捐赠金额不能少于1000">
             <ul class="money-box">
-              <li>1000</li>
-              <li>2000</li>
+              <li data-value="1000">1000</li>
+              <li data-value="2000">2000</li>
             </ul>
             <div class="help-block with-errors"></div>
           </div>
@@ -209,9 +211,10 @@
 
     // 金额选择
     $('.money-box li').on('click', function() {
-      var _this = $(this);
+      var _this = $(this),
+        value = _this.attr("data-value");
       _this.addClass('active').siblings().removeClass('active');
-      _this.parent().siblings('input').val(_this.text());
+      _this.parent().siblings('input').val(value);
     })
 
     // 表单序列化为JSON对象
